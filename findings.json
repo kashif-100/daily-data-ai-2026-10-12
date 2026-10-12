@@ -1,0 +1,186 @@
+{
+  "dataset": {
+    "n_users": 300,
+    "n_movies": 120,
+    "n_ratings": 2835,
+    "density_pct": 7.88,
+    "avg_rating": 3.93,
+    "rating_distribution_pct": {
+      "1": 0.1,
+      "2": 5.5,
+      "3": 28.4,
+      "4": 33.4,
+      "5": 32.6
+    },
+    "avg_ratings_per_user": 9.4,
+    "avg_ratings_per_movie": 23.6
+  },
+  "methods": {
+    "item-item CF": "cosine similarity between mean-centered movie rating vectors; top-15 neighbours, similarity-weighted average",
+    "user-user CF": "cosine similarity between mean-centered user rating vectors; top-25 neighbours",
+    "popularity": "baseline: recommend highest average-rated movies, same for everyone"
+  },
+  "rmse": {
+    "item-item CF": 0.8174,
+    "user-user CF": 0.8966,
+    "popularity": 0.9389,
+    "random": 3.6076
+  },
+  "mae": {
+    "item-item CF": 0.6185,
+    "user-user CF": 0.694,
+    "popularity": 0.7849,
+    "random": 3.4739
+  },
+  "precision_at_5": {
+    "item-item CF": 0.0233,
+    "user-user CF": 0.0209,
+    "popularity": 0.0047,
+    "random": 0.0186
+  },
+  "recall_at_5": {
+    "item-item CF": 0.064,
+    "user-user CF": 0.0484,
+    "popularity": 0.0155,
+    "random": 0.0368
+  },
+  "n_test_users": 89,
+  "n_test_ratings": 267,
+  "top_rated_movies": [
+    {
+      "title": "Last Journey",
+      "genre_primary": "Action",
+      "mean": 4.36,
+      "count": 11
+    },
+    {
+      "title": "Storm Monsoon",
+      "genre_primary": "Drama",
+      "mean": 4.36,
+      "count": 14
+    },
+    {
+      "title": "Broken Cipher",
+      "genre_primary": "Drama",
+      "mean": 4.31,
+      "count": 13
+    },
+    {
+      "title": "Golden Garden",
+      "genre_primary": "Comedy",
+      "mean": 4.29,
+      "count": 14
+    },
+    {
+      "title": "Neon Lantern",
+      "genre_primary": "Action",
+      "mean": 4.22,
+      "count": 23
+    }
+  ],
+  "hidden_gems": [
+    {
+      "title": "Frozen Monsoon",
+      "genre_primary": "Action",
+      "mean": 4.5,
+      "count": 6
+    },
+    {
+      "title": "Infinite Voyage",
+      "genre_primary": "Animation",
+      "mean": 4.43,
+      "count": 7
+    },
+    {
+      "title": "Iron Lantern",
+      "genre_primary": "Animation",
+      "mean": 4.4,
+      "count": 5
+    }
+  ],
+  "blockbusters": [
+    {
+      "title": "Velvet Voyage",
+      "genre_primary": "Romance",
+      "mean": 3.97,
+      "count": 86
+    },
+    {
+      "title": "Midnight Requiem",
+      "genre_primary": "Action",
+      "mean": 3.85,
+      "count": 85
+    },
+    {
+      "title": "Electric Voyage",
+      "genre_primary": "Action",
+      "mean": 4.04,
+      "count": 84
+    }
+  ],
+  "demo_user": {
+    "user_id": "U0129",
+    "n_ratings": 22,
+    "avg_rating": 3.55,
+    "top_genres": {
+      "Action": 4.8,
+      "Animation": 3.33,
+      "Horror": 3.25
+    },
+    "recommendations": [
+      {
+        "movie_id": "M053",
+        "title": "Infinite Requiem (2017)",
+        "predicted_rating": 4.93,
+        "similar_viewers_avg": 4.14,
+        "similar_viewers_n": 7,
+        "because": [
+          "you rated 'Crimson Echo' 5/5 (similarity 0.07)",
+          "you rated 'Hidden Avalanche' 3/5 (similarity 0.00)"
+        ]
+      },
+      {
+        "movie_id": "M092",
+        "title": "Secret Journey (2016)",
+        "predicted_rating": 4.86,
+        "similar_viewers_avg": 3.0,
+        "similar_viewers_n": 1,
+        "because": [
+          "you rated 'Crimson Echo' 5/5 (similarity 0.12)"
+        ]
+      },
+      {
+        "movie_id": "M086",
+        "title": "Paper Frontier (2012)",
+        "predicted_rating": 4.82,
+        "similar_viewers_avg": 4.12,
+        "similar_viewers_n": 43,
+        "because": [
+          "you rated 'Crimson Echo' 5/5 (similarity 0.21)",
+          "you rated 'Electric Voyage' 5/5 (similarity 0.21)"
+        ]
+      },
+      {
+        "movie_id": "M007",
+        "title": "Broken Voyage (1997)",
+        "predicted_rating": 4.79,
+        "similar_viewers_avg": 3.0,
+        "similar_viewers_n": 1,
+        "because": [
+          "you rated 'Silent Cipher' 5/5 (similarity 0.20)"
+        ]
+      },
+      {
+        "movie_id": "M057",
+        "title": "Iron Lantern (1998)",
+        "predicted_rating": 4.58,
+        "similar_viewers_avg": 4.4,
+        "similar_viewers_n": 5,
+        "because": [
+          "you rated 'Crimson Echo' 5/5 (similarity 0.08)",
+          "you rated 'Lonely Voyage' 3/5 (similarity 0.01)"
+        ]
+      }
+    ]
+  }
+}
